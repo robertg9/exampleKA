@@ -1,0 +1,13 @@
+<ul>
+    <li>Imię: {{ user.firstname }}</li>
+    <li>Nazwisko: {{ user.lastName }}</li>
+    <li>Miasto: {{ user.city }}</li>
+    <li>Doświadczenie: {{ user.experience }}</li>
+    <li>Kraj: {{ user.country.name|trans() }}</li>
+    <li>Profesja: {{ user.occupation.name|trans() }}</li>
+    <ul>
+        {% for availability in user.availabilities %}
+            <li>{{ availability.name|trans() }}</li>
+        {% endfor %}
+    </ul>
+</ul>

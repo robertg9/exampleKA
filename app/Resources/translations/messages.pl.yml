@@ -1,0 +1,43 @@
+Firstname: Imię
+Lastname: Nazwisko
+Experience: Doświadczenie w latach
+City: Miasto
+Country: Kraj
+Availabilities: Dyspozycyjność
+Occupation: Profesja
+save: Zapisz
+Errors: Lista błędów
+
+programmer: Programista
+coder: Koder
+designer: Projektant
+
+poland: Polska
+germany: Niemcy
+ukraine: Ukraina
+russia: Rosja
+
+remote: praca zdalna
+stationary: praca stacjonarna
+
+firstname_to_short: Imię jest za krótkie minimum 3 znaki
+firstname_to_long: Imię jest za długie max 20 znaków
+firstname_range_error: Imię musi zawierać minimum 3 do 20 znaków
+
+lastname_to_short: Nazwisko jest za krótkie minimum 3 znaki
+lastname_to_long: Nazwisko jest za długie max 50 znaków
+lastname_range_error: Nazwisko musi zawierać minimum 3 do 20 znaków
+
+city_to_short: Nazwa miasta za krótka minimum 3 znaki
+city_to_long: Nazwa miasta za dluga max 50 znaków
+city_range_error: Nazwa miasta musi się składać z 3-50 znaków
+
+firstname_illegal_characters: Imię zawiera niedozwolone znaki
+lastname_illegal_characters: Nazwisko zawiera niedozwolone znaki
+
+availability_not_selected: Wybeirz jedną dyspozycyjność
+occupation_not_selected: Wybierz jedną profesję
+country_not_selected: Wybierz kraj
+
+experience_not_number: Podana wartość doświadczenia w latach musi być liczbą
+experience_not_number_or_to_high: Podana musi być liczbą z przedziału 0-99

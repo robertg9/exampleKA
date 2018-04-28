@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+        '@jquery_js'
+        '@jquery_ui_js'
+        'assets/js/jquery.form-validator.min.js'
+    %}<script src="{{ asset_url }}"></script>
+    <script>
+        $(document).ready(function() {
+            $.validate({
+                lang: 'en'
+            });
+        });
+    </script>
+    {% endjavascripts %}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite'
+        '@jquery_ui_css'
+    %}<link rel="stylesheet" href="{{ asset_url }}" >
+    {% endstylesheets %}
+{% endblock %}
+{% block body %}
+    {% if errors|length %}
+        <h3>{{ 'Errors'|trans() }}</h3>
+        <ul>
+            {% for error in errors %}
+                <li>{{ error|trans() }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
