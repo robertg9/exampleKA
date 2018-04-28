@@ -11,6 +11,22 @@
             $.validate({
                 lang: 'en'
             });
+
+            $('#experience_slider').insertAfter($('#experience_label'));
+            $("#user_experience").hide();
+
+            $( "#experience_slider" ).slider({
+                range: "max",
+                min: 0,
+                max: 99,
+                value: 0,
+                slide: function( event, ui ) {
+                    $( "#user_experience").val( ui.value );
+                    var labelText = $('#experience_label').text();
+                    var splitText = labelText.split(':');
+                    $('#experience_label').text(splitText[0] + ':' + ui.value);
+                }
+            });
         });
     </script>
     {% endjavascripts %}
@@ -33,5 +49,6 @@
     {% endif %}
     {{ form_start(form) }}
     {{ form_widget(form) }}
+    <div id="experience_slider"></div>
     {{ form_end(form) }}
 {% endblock %}

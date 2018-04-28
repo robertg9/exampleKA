@@ -57,6 +57,9 @@ class UserType extends AbstractType
             ])
             ->add('experience', TextType::class, [
                 'required' => true,
+                'label_attr' => [
+                    'id' => 'experience_label',
+                ],
                 'attr' => [
                     'data-validation' => 'length custom',
                     'data-validation-length' => '1-2',
