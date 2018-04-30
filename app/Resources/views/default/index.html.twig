@@ -8,12 +8,11 @@
     %}<script src="{{ asset_url }}"></script>
     <script>
         $(document).ready(function() {
-            $.validate({
-                lang: 'en'
-            });
-
             $('#experience_slider').insertAfter($('#experience_label'));
-            $("#user_experience").hide();
+            $("#user_experience").css({
+                'opacity': 0,
+                'position': 'absolute'
+            });
 
             $( "#experience_slider" ).slider({
                 range: "max",
@@ -26,6 +25,10 @@
                     var splitText = labelText.split(':');
                     $('#experience_label').text(splitText[0] + ':' + ui.value);
                 }
+            });
+
+            $.validate({
+                lang: 'en'
             });
         });
     </script>
