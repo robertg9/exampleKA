@@ -56,7 +56,7 @@ class UserType extends AbstractType
                 ]
             ])
             ->add('experience', TextType::class, [
-                'required' => true,
+                'required' => false,
                 'label_attr' => [
                     'id' => 'experience_label',
                 ],
